@@ -1,20 +1,20 @@
 # Muhammad Laraib Jamal - Engineering Portfolio
 
-Static engineering portfolio for Muhammad Laraib Jamal, built purely with semantic HTML5, modern CSS3, and vanilla JavaScript.
+Static engineering portfolio for Muhammad Laraib Jamal, built with semantic HTML5, modern CSS3, and vanilla JavaScript following the Stripe Design Language.
 
-## Live Capabilities
+## Architecture & Design Highlights
 
-- **Interactive Kubernetes Autoscaling Visualizer**: Real-time canvas simulation of dynamic pod replica scaling, node pool packing, and traffic volatility thresholds.
-- **Autonomous Vehicle A* Pathfinding Grid**: Playable obstacle avoidance canvas computing optimal trajectories using Manhattan distance heuristics.
-- **Embedded Console & Command Palette (`Ctrl+K`)**: Interactive terminal console with custom commands (`help`, `cat resume`, `experience`, `projects`, `skills`, `benchmark`, `scale <load>`).
-- **Interactive Architecture Blueprints**: Deep-dive SVG schematics detailing the Kubernetes custom controller, Tesla 50TB+ fleet telemetry pipeline, and AWS serverless anomaly detection engine.
-- **Telemetry Bar**: Live latency ticker and UTC/IST synchronization.
+- **Stripe Design Language**: Subtle mesh gradient backdrop, crisp typography (Plus Jakarta Sans and JetBrains Mono), layered elevation, and white/dark-blue contrast.
+- **Layered Dual-Mockup Stage**: Telemetry throughput chart and verified engineer profile card with quick email copy and direct resume download.
+- **Production Track Record**: Highlights engineering contributions at Kubernetes (CNCF), Tesla, and Amazon Web Services (AWS).
+- **Featured Systems Showcase**: Filterable project gallery with pipeline execution flowcharts and architecture specification deep-dives.
+- **Zero Build Tools**: 100% static, fast-loading, accessible, and lightweight.
 
 ## Tech Stack
 
-- **HTML5**: Semantic markup, accessible labels, zero framework dependencies.
-- **CSS3**: Custom properties, responsive flexbox/grid, systems-inspired dark console theme.
-- **JavaScript (ES6+)**: Vanilla canvas rendering, event coordination, terminal command parser.
+- **HTML5**: Semantic markup, accessible landmarks, and JSON-LD schema.
+- **CSS3**: Custom design tokens, responsive CSS grid/flexbox, and Stripe-inspired micro-interactions.
+- **JavaScript (ES6+)**: Scroll reveal observer, interactive filter tabs, and toast feedback.
 
 ## Local Development
 

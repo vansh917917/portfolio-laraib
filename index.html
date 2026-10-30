@@ -3,588 +3,1086 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Laraib Jamal - Distributed Systems, Cloud-Native, and Autonomous AI Engineer">
-  <title>Muhammad Laraib Jamal | Distributed Systems &amp; Autonomous AI</title>
+  <title>Muhammad Laraib Jamal | Distributed Systems & Autonomous AI Engineer</title>
+  <meta name="description" content="Portfolio of Muhammad Laraib Jamal, Computer Science & Engineering student at NIE Mysore (CGPA: 9.7). Contributor to Kubernetes core autoscaling, Tesla autonomous vehicle simulations, and AWS serverless anomaly detection.">
+  <meta name="author" content="Muhammad Laraib Jamal">
+  <meta name="theme-color" content="#635bff">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Laraib Jamal | Systems & Autonomous AI Engineer">
+  <meta property="og:description" content="Computer Science & Engineering undergraduate at NIE Mysore. Contributor to Kubernetes CNCF, Tesla, and AWS.">
+  <meta property="og:image" content="laraib_pic.jpg">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://github.com/vansh917917/portfolio-laraib#person",
+        "name": "Muhammad Laraib Jamal",
+        "givenName": "Muhammad Laraib",
+        "familyName": "Jamal",
+        "jobTitle": "Distributed Systems & Machine Learning Engineer",
+        "email": "laraibaishah123@gmail.com",
+        "telephone": "+919120888968",
+        "sameAs": [
+          "https://github.com/vansh917917",
+          "https://linkedin.com/in/laraib-jamal"
+        ],
+        "affiliation": {
+          "@type": "EducationalOrganization",
+          "name": "The National Institute of Engineering, Mysore",
+          "url": "https://nie.ac.in"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- System Telemetry Bar -->
-  <aside class="telemetry-bar">
-    <div class="telemetry-inner">
-      <div class="telemetry-group">
-        <span class="telemetry-indicator online"></span>
-        <span class="telemetry-label">SYSTEM:</span>
-        <span class="telemetry-value">ONLINE / NOMINAL</span>
-      </div>
-      <div class="telemetry-group">
-        <span class="telemetry-label">FOCUS:</span>
-        <span class="telemetry-value">DISTRIBUTED SYSTEMS &amp; AUTONOMOUS AI</span>
-      </div>
-      <div class="telemetry-group desktop-only">
-        <span class="telemetry-label">LOCATION:</span>
-        <span class="telemetry-value">PRAYAGRAJ, IN</span>
-      </div>
-      <div class="telemetry-group desktop-only">
-        <span class="telemetry-label">P99 LATENCY:</span>
-        <span class="telemetry-value" id="telemetry-latency">2.1ms</span>
-      </div>
-      <div class="telemetry-group">
-        <span class="telemetry-label">LOCAL CLOCK:</span>
-        <span class="telemetry-value font-mono" id="telemetry-clock">--:--:--</span>
-      </div>
-    </div>
-  </aside>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <!-- Navigation Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#hero" class="brand-logo">
-        <span class="logo-code">&gt;_</span>
-        <span class="logo-name">laraib.jamal</span>
+  <!-- Top Hero Stripe Gradient Backdrop -->
+  <div class="stripe-mesh-backdrop" aria-hidden="true">
+    <div class="mesh-shape mesh-shape-1"></div>
+    <div class="mesh-shape mesh-shape-2"></div>
+    <div class="mesh-shape mesh-shape-3"></div>
+    <div class="mesh-shape mesh-shape-4"></div>
+  </div>
+
+  <!-- Stripe-Style Clean Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-container header-inner">
+      <a href="#hero" class="brand-link">
+        <span class="brand-badge">LJ</span>
+        <span class="brand-name">Laraib Jamal</span>
       </a>
-      <nav class="site-nav" id="site-nav">
-        <a href="#playground" class="nav-link">Playground</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link nav-cta">Contact</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#philosophy" class="nav-link">Engineering</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
-      <div class="header-tools">
-        <button class="terminal-trigger-btn" id="terminal-open-btn" aria-label="Open Interactive Terminal">
-          <span class="term-key-badge">Ctrl+K</span>
-          <span class="term-btn-text">Terminal</span>
-        </button>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
+
+      <div class="header-actions">
+        <a href="#contact" class="header-contact-link">
+          <span>Contact</span>
+          <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="laraib cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+          <span>Resume (PDF)</span>
+          <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="section hero-section">
-      <div class="container hero-container">
-        <div class="hero-main-row">
-          <div class="hero-text-col">
-            <div class="hero-badge">
-              <span class="status-pulse"></span>
-              <span>Open-Source Contributor &amp; Systems Engineer</span>
+  <main id="main-content">
+    <!-- Hero Section: Stripe Gradient, White, and Dark Blue -->
+    <section class="section-hero" id="hero">
+      <div class="site-container hero-container">
+        <div class="hero-content reveal-on-scroll">
+          <div class="eyebrow-pill">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>NIE Mysore · Computer Science &amp; Engineering · CGPA 9.7</span>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting resilient distributed systems and autonomous machine intelligence.
+          </h1>
+
+          <p class="hero-lead">
+            I engineer high-throughput cloud infrastructure, Kubernetes core autoscaling, and real-time autonomous simulation platforms. Contributor to Kubernetes container orchestration, Tesla vehicle simulation pipelines, and AWS serverless anomaly detection.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#experience" class="btn-stripe-dark">
+              <span>Explore Track Record</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+
+            <a href="mailto:laraibaishah123@gmail.com" class="link-stripe-arrow">
+              <span>Contact Laraib</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-tag-pills">
+            <span class="pill-label">Core Stack:</span>
+            <span class="tech-badge">Go</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Kubernetes</span>
+            <span class="tech-badge">PyTorch</span>
+            <span class="tech-badge">Apache Spark</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">AWS</span>
+          </div>
+        </div>
+
+        <!-- Stripe Layered Dual-Mockup Showcase -->
+        <div class="hero-mockup-stage reveal-on-scroll" data-parallax="0.04">
+          <!-- Back Card: Engineering Intelligence Dashboard -->
+          <div class="mockup-dash-card">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <div class="dash-window-title">
+                <svg class="dash-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>k8s-autoscaler-telemetry</span>
+              </div>
+              <span class="mockup-tag-live">CNCF Core</span>
             </div>
-            <h1 class="hero-title">
-              Architecting resilient distributed systems and autonomous machine intelligence.
-            </h1>
-            <p class="hero-subtitle">
-              I am Muhammad Laraib Jamal. Specializing in high-throughput cloud infrastructure, Kubernetes core autoscaling, and real-time autonomous vehicle simulation platforms.
+
+            <div class="dash-body">
+              <div class="dash-metrics-row">
+                <div class="dash-metric-col">
+                  <span class="dash-label">CLUSTER EFFICIENCY</span>
+                  <span class="dash-val">+30%</span>
+                  <span class="dash-badge badge-success">High-Load Tested</span>
+                </div>
+                <div class="dash-metric-col">
+                  <span class="dash-label">FLEET TELEMETRY</span>
+                  <span class="dash-val">50TB+ / day</span>
+                  <span class="dash-badge badge-neutral">Apache Spark</span>
+                </div>
+              </div>
+
+              <div class="dash-chart-card">
+                <div class="chart-header">
+                  <span class="chart-title">Dynamic Cluster Throughput vs Load</span>
+                  <span class="chart-tag">O(1) Scheduling</span>
+                </div>
+                <svg class="dash-chart-svg" viewBox="0 0 320 80" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="chartGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#635bff" stop-opacity="0.25"/>
+                      <stop offset="100%" stop-color="#635bff" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 68 Q 50 62 100 48 T 200 32 T 270 16 T 320 8 L 320 80 L 0 80 Z" fill="url(#chartGlow)" />
+                  <path d="M 0 68 Q 50 62 100 48 T 200 32 T 270 16 T 320 8" stroke="#635bff" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                  <circle cx="100" cy="48" r="3.5" fill="#635bff" stroke="#ffffff" stroke-width="2" />
+                  <circle cx="200" cy="32" r="3.5" fill="#635bff" stroke="#ffffff" stroke-width="2" />
+                  <circle cx="270" cy="16" r="3.5" fill="#635bff" stroke="#ffffff" stroke-width="2" />
+                  <circle cx="320" cy="8" r="4" fill="#00d4ff" stroke="#ffffff" stroke-width="2" />
+                </svg>
+                <div class="chart-labels">
+                  <span>Load: 20%</span>
+                  <span>50%</span>
+                  <span>75%</span>
+                  <span>95% (Scaled)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Front Card: Profile & Verified Credentials -->
+          <div class="stripe-mockup-card">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="mockup-domain">engineer.laraib-jamal.dev</span>
+            </div>
+
+            <div class="mockup-body">
+              <div class="mockup-portrait-row">
+                <img src="laraib_pic.jpg" alt="Muhammad Laraib Jamal" class="mockup-avatar" width="96" height="110">
+                <div class="mockup-identity">
+                  <div class="mockup-name">Muhammad Laraib Jamal</div>
+                  <div class="mockup-role">Distributed Systems &amp; Autonomous AI</div>
+                  <div class="mockup-college">NIE Mysore (Batch 2024 - 2028)</div>
+                  <div class="mockup-status-tag">
+                    <span class="status-pulse"></span>
+                    <span>Available for Engineering Roles</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mockup-stats-panel">
+                <div class="mockup-stat-cell">
+                  <span class="stat-cell-label">ACADEMIC CGPA</span>
+                  <span class="stat-cell-val highlight-blue">9.7 / 10.0</span>
+                </div>
+              </div>
+
+              <div class="mockup-action-strip">
+                <button type="button" class="btn-mockup-action copy-email-btn" data-email="laraibaishah123@gmail.com">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-label">Copy Email</span>
+                </button>
+                <a href="laraib cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-mockup-resume">
+                  <span>Resume PDF</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Bar: Clean Stripe Slate & White Strip -->
+    <section class="section-metrics" aria-label="Engineering Performance Metrics">
+      <div class="site-container">
+        <div class="metrics-grid">
+          <div class="metric-item reveal-on-scroll">
+            <div class="metric-number">30%</div>
+            <div class="metric-title">Cluster Efficiency Gain</div>
+            <div class="metric-sub">Kubernetes CNCF Autoscaling</div>
+          </div>
+          <div class="metric-item reveal-on-scroll">
+            <div class="metric-number">50TB+</div>
+            <div class="metric-title">Daily Fleet Sensor Data</div>
+            <div class="metric-sub">Processed with Apache Spark at Tesla</div>
+          </div>
+          <div class="metric-item reveal-on-scroll">
+            <div class="metric-number">97%</div>
+            <div class="metric-title">Anomaly Precision</div>
+            <div class="metric-sub">AWS CloudWatch Serverless AI</div>
+          </div>
+          <div class="metric-item reveal-on-scroll">
+            <div class="metric-number">9.7</div>
+            <div class="metric-title">Cumulative CGPA</div>
+            <div class="metric-sub">B.E. Computer Science at NIE Mysore</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section: Stripe Card Grid -->
+    <section class="section-projects" id="experience">
+      <div class="site-container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-kicker">ENGINEERING TRACK RECORD</span>
+          <h2 class="section-heading">Professional Experience</h2>
+          <p class="section-subheading">
+            Production contributions across container orchestration core, autonomous vehicle simulations, and cloud-native machine learning.
+          </p>
+        </div>
+
+        <div class="projects-grid-container">
+          <!-- Experience 1: Kubernetes -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="systems">
+            <div class="card-badge-row">
+              <span class="badge-indigo">KUBERNETES (CNCF)</span>
+              <span class="badge-date">September 2024 - Present</span>
+            </div>
+
+            <h3 class="card-project-title">Principal Contributor: Kubernetes Core Autoscaling</h3>
+            <p class="card-project-desc">
+              Led the development of a new autoscaling algorithm for Kubernetes, improving cluster efficiency by 30% in high-load production environments. Contributed to core networking enhancements reducing turnaround times by 20% for global enterprises.
             </p>
-            <div class="hero-actions">
-              <a href="#playground" class="btn btn-primary">Test Live Simulations</a>
-              <a href="#experience" class="btn btn-secondary">Track Record</a>
-              <a href="laraib cv.pdf" target="_blank" class="btn btn-ghost">Download Resume (PDF)</a>
-            </div>
-          </div>
-          <div class="hero-media-col">
-            <div class="portrait-frame">
-              <div class="portrait-header">
-                <span class="portrait-label">SYS_ID: LARAIB</span>
-                <span class="portrait-status">AVAILABLE</span>
-              </div>
-              <div class="portrait-image-wrapper">
-                <img src="laraib_pic.jpg" alt="Muhammad Laraib Jamal" class="portrait-img">
-              </div>
-              <div class="portrait-info-banner">
-                <span class="portrait-name">Muhammad Laraib Jamal</span>
-                <span class="portrait-sub">Systems &amp; Autonomous AI</span>
-              </div>
-              <div class="portrait-footer">
-                <span class="portrait-tag">Kubernetes</span>
-                <span class="portrait-tag">Tesla</span>
-                <span class="portrait-tag">AWS</span>
-                <span class="portrait-tag">9.7 CGPA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-card">
-            <span class="stat-value">30%</span>
-            <span class="stat-label">Kubernetes Cluster Efficiency Gain</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">50TB+</span>
-            <span class="stat-label">Daily Fleet Sensor Data (Tesla)</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">97%</span>
-            <span class="stat-label">Anomaly Precision (AWS CloudWatch)</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">9.7</span>
-            <span class="stat-label">CGPA (B.E. Computer Science)</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Interactive Simulation Playground -->
-    <section id="playground" class="section playground-section">
-      <div class="container">
-        <div class="section-header flex-header">
-          <div>
-            <span class="section-tag">Interactive Simulation Engine</span>
-            <h2 class="section-title">Live Systems Playground</h2>
-            <p class="section-subtext">Run real-time algorithmic simulations directly in your browser with zero dependencies.</p>
-          </div>
-          <div class="sim-tab-controls">
-            <button class="sim-tab-btn active" id="tab-btn-k8s" data-target="k8s">Kubernetes Autoscaler</button>
-            <button class="sim-tab-btn" id="tab-btn-astar" data-target="astar">Autonomous A* Pathfinding</button>
-          </div>
-        </div>
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">AUTOSCALING TOPOLOGY PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">Cluster Telemetry</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Autoscaling Algorithm</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Horizontal Pod Autoscaler</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Dynamic Node Packing</span>
+              </div>
+            </div>
 
-        <!-- Simulation View 1: Kubernetes Autoscaling -->
-        <div class="sim-panel active" id="sim-panel-k8s">
-          <div class="sim-canvas-wrapper">
-            <div class="sim-canvas-header">
-              <div class="sim-title-group">
-                <span class="sim-badge">TOPOLOGY VISUALIZER</span>
-                <span class="sim-legend">Target CPU: 70% | Pod Limit: 4/Node</span>
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>Standing Ovation at KubeCon</strong>
+                <p>Presented technical architectural paradigms on the future of container orchestration, earning standing ovation from industry maintainers.</p>
               </div>
-              <div class="sim-live-stats">
-                <span class="sim-stat-pill">Load: <strong id="sim-metric-load">45%</strong></span>
-                <span class="sim-stat-pill">Pods: <strong id="sim-metric-pods">6 active</strong></span>
-                <span class="sim-stat-pill">Nodes: <strong id="sim-metric-nodes">2 nodes</strong></span>
-                <span class="sim-stat-pill">State: <strong id="sim-metric-status">Stable</strong></span>
+              <div class="spec-col">
+                <strong>10,000+ Developers Worldwide</strong>
+                <p>Authored detailed documentation and implementation reference tutorials adopted across major enterprise cloud deployments.</p>
               </div>
             </div>
-            <div class="canvas-container">
-              <canvas id="k8s-canvas"></canvas>
-            </div>
-            <div class="sim-controls">
-              <div class="control-group">
-                <label for="k8s-traffic-slider">Inject Cluster Traffic Load:</label>
-                <input type="range" id="k8s-traffic-slider" min="15" max="95" value="45" class="custom-slider">
-                <span id="slider-val-label" class="slider-badge">45%</span>
-              </div>
-              <div class="control-actions">
-                <button class="btn btn-secondary btn-sm" id="btn-spike-traffic">Simulate Traffic Spike (90%)</button>
-                <button class="btn btn-secondary btn-sm" id="btn-throttle-traffic">Throttle Down (20%)</button>
-                <button class="btn btn-ghost btn-sm" id="btn-reset-cluster">Reset Topology</button>
-              </div>
-            </div>
-          </div>
-          <div class="sim-annotation">
-            <strong>Engineering Context:</strong> Reflects Muhammad's contribution to Kubernetes core autoscaling algorithms, where dynamic cluster telemetry regulates horizontal pod scaling and node packing to save cloud infrastructure spend under erratic traffic.
-          </div>
-        </div>
 
-        <!-- Simulation View 2: A* Autonomous Navigation Grid -->
-        <div class="sim-panel" id="sim-panel-astar">
-          <div class="sim-canvas-wrapper">
-            <div class="sim-canvas-header">
-              <div class="sim-title-group">
-                <span class="sim-badge">PATH PLANNING ENGINE</span>
-                <span class="sim-legend">Green: Vehicle | Red: Goal | Cyan: A* Path</span>
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">Kubernetes</span>
+                <span class="tag-chip">Go</span>
+                <span class="tag-chip">Docker</span>
+                <span class="tag-chip">Distributed Systems</span>
+                <span class="tag-chip">Cloud-Native</span>
               </div>
-              <div class="sim-live-stats">
-                <span class="sim-stat-pill">Path Length: <strong id="path-metric-length">--</strong></span>
-                <span class="sim-stat-pill">Nodes Explored: <strong id="path-metric-nodes">--</strong></span>
-              </div>
-            </div>
-            <div class="canvas-container">
-              <canvas id="astar-canvas"></canvas>
-            </div>
-            <div class="sim-controls astar-controls">
-              <p class="canvas-hint">Click or drag anywhere on the grid to create or remove obstacles.</p>
-              <div class="control-actions">
-                <button class="btn btn-primary btn-sm" id="btn-run-astar">Re-Compute Path</button>
-                <button class="btn btn-secondary btn-sm" id="btn-random-walls">Generate Random Obstacles</button>
-                <button class="btn btn-ghost btn-sm" id="btn-clear-walls">Clear Grid</button>
-              </div>
-            </div>
-          </div>
-          <div class="sim-annotation">
-            <strong>Engineering Context:</strong> Implements the foundational A* search and heuristic collision-avoidance logic utilized in Muhammad's self-driving vehicle simulation and autonomous drone LiDAR navigation systems.
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Professional Experience -->
-    <section id="experience" class="section experience-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">01 / Engineering Track Record</span>
-          <h2 class="section-title">Professional Experience</h2>
-        </div>
-        <div class="timeline">
-          <!-- Kubernetes -->
-          <article class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-role">Principal Contributor</span>
-              <span class="timeline-company">Kubernetes (CNCF)</span>
-              <span class="timeline-date">September 2024 - Present</span>
-              <button class="blueprint-link-btn" data-blueprint="kubernetes">
-                <span class="bp-icon">&#9655;</span> Inspect Autoscaler Blueprint
-              </button>
-            </div>
-            <div class="timeline-details">
-              <ul class="bullet-list">
-                <li>Led the development of a new autoscaling algorithm for Kubernetes, improving cluster efficiency by 30% in high-load production environments.</li>
-                <li>Contributed to core networking enhancements, reducing deployment turnaround time for global enterprises by 20%.</li>
-                <li>Authored in-depth technical documentation and tutorials adopted by over 10,000 developers worldwide.</li>
-                <li>Delivered technical presentation at KubeCon on the architecture of container orchestration, earning standing ovation from attendees.</li>
-              </ul>
-              <div class="tech-stack-row">
-                <span class="tech-pill">Kubernetes</span>
-                <span class="tech-pill">Go</span>
-                <span class="tech-pill">Cloud-Native</span>
-                <span class="tech-pill">Docker</span>
-                <span class="tech-pill">Distributed Consensus</span>
+              <div class="card-cta-group">
+                <button type="button" class="btn-card-spec" data-modal="modal-kubernetes">
+                  <span>Architecture Specs</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
 
-          <!-- Tesla -->
-          <article class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-role">Junior Developer Intern</span>
-              <span class="timeline-company">Tesla</span>
-              <span class="timeline-location">Palo Alto, CA</span>
-              <span class="timeline-date">Summer 2023</span>
-              <button class="blueprint-link-btn" data-blueprint="tesla">
-                <span class="bp-icon">&#9655;</span> Inspect Telemetry Blueprint
-              </button>
+          <!-- Experience 2: Tesla -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="autonomous">
+            <div class="card-badge-row">
+              <span class="badge-indigo">TESLA · PALO ALTO, CA</span>
+              <span class="badge-date">Summer 2023</span>
             </div>
-            <div class="timeline-details">
-              <ul class="bullet-list">
-                <li>Designed and implemented an autonomous vehicle simulation platform testing edge cases for self-driving AI, reducing validation time-to-market by 20%.</li>
-                <li>Integrated deep reinforcement learning models into vehicle control systems, achieving a 25% improvement in decision-making accuracy.</li>
-                <li>Optimized fleet telemetry data processing pipelines using Apache Spark, processing over 50TB of daily sensor data.</li>
-                <li>Presented the simulation platform directly to executive leadership, receiving direct commendation for technical innovation and platform scalability.</li>
-              </ul>
-              <div class="tech-stack-row">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">Deep RL</span>
-                <span class="tech-pill">Apache Spark</span>
-                <span class="tech-pill">Unity 3D</span>
-                <span class="tech-pill">C++</span>
-              </div>
-            </div>
-          </article>
 
-          <!-- AWS -->
-          <article class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-role">Machine Learning Engineer Intern</span>
-              <span class="timeline-company">Amazon Web Services (AWS)</span>
-              <span class="timeline-location">Seattle, WA</span>
-              <span class="timeline-date">September 2023 - December 2023</span>
-              <button class="blueprint-link-btn" data-blueprint="aws">
-                <span class="bp-icon">&#9655;</span> Inspect Anomaly Blueprint
-              </button>
-            </div>
-            <div class="timeline-details">
-              <ul class="bullet-list">
-                <li>Built a serverless AI anomaly detection engine for AWS CloudWatch, identifying infrastructure degradation with 97% precision.</li>
-                <li>Engineered an automated data pipeline using AWS Glue and Redshift, cutting manual intervention by 85% across petabyte datasets.</li>
-                <li>Enhanced SageMaker hyperparameter tuning mechanisms, accelerating model training speeds by 40%.</li>
-                <li>Awarded the AWS Rising Star Award for outstanding contributions to cloud-native AI infrastructure.</li>
-              </ul>
-              <div class="tech-stack-row">
-                <span class="tech-pill">AWS SageMaker</span>
-                <span class="tech-pill">CloudWatch</span>
-                <span class="tech-pill">AWS Glue</span>
-                <span class="tech-pill">Redshift</span>
-                <span class="tech-pill">TensorFlow</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Projects -->
-    <section id="projects" class="section projects-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">02 / Engineering Systems</span>
-          <h2 class="section-title">Selected Projects</h2>
-        </div>
-
-        <div class="filter-bar" id="project-filters">
-          <button class="filter-btn active" data-filter="all">All Systems</button>
-          <button class="filter-btn" data-filter="systems-cloud">Distributed &amp; Cloud</button>
-          <button class="filter-btn" data-filter="ai-robotics">Autonomous &amp; Robotics</button>
-          <button class="filter-btn" data-filter="apps">Applied AI &amp; Full-Stack</button>
-        </div>
-
-        <div class="projects-grid" id="projects-grid">
-          <!-- 1. Self Driving Car Simulation -->
-          <article class="project-card" data-category="ai-robotics">
-            <div class="project-header">
-              <span class="project-num">SYS-01</span>
-              <span class="project-cat">Autonomous AI</span>
-            </div>
-            <h3 class="project-title">Self-Driving Car Simulation</h3>
-            <p class="project-desc">
-              High-fidelity vehicle simulation built in Unity with a Python backend. Features convolutional neural networks for road sign and vehicle detection paired with A* path planning for collision-free trajectory navigation.
+            <h3 class="card-project-title">Junior Developer Intern: Autonomous Vehicle Simulation</h3>
+            <p class="card-project-desc">
+              Designed and implemented an autonomous vehicle simulation platform in Unity and Python to test edge cases for self-driving AI, reducing validation time-to-market by 20%. Integrated deep reinforcement learning models into vehicle control systems, improving decision-making accuracy by 25%.
             </p>
-            <div class="project-tech">
-              <span>Unity</span>
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>A* Search</span>
-              <span>CNN</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">FLEET SIMULATION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">CAN Bus Sensors</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Apache Spark (50TB+)</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Unity Edge Scenarios</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Deep RL Policy</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">Demonstrated at IIT Bombay</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>50TB+ Daily Sensor Streams</strong>
+                <p>Engineered and optimized big-data fleet pipelines with Apache Spark to ingest, vectorize, and evaluate continuous sensor telemetry.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Direct Leadership Commendation</strong>
+                <p>Presented the simulation platform directly to executive leadership, earning formal commendation for innovation and architecture scalability.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">Python</span>
+                <span class="tag-chip">Deep Reinforcement Learning</span>
+                <span class="tag-chip">Apache Spark</span>
+                <span class="tag-chip">Unity 3D</span>
+                <span class="tag-chip">C++</span>
+              </div>
+
+              <div class="card-cta-group">
+                <button type="button" class="btn-card-spec" data-modal="modal-tesla">
+                  <span>Architecture Specs</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- 2. Real-Time Fraud Detection System -->
-          <article class="project-card" data-category="systems-cloud">
-            <div class="project-header">
-              <span class="project-num">SYS-02</span>
-              <span class="project-cat">Distributed Systems</span>
+          <!-- Experience 3: AWS -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="systems">
+            <div class="card-badge-row">
+              <span class="badge-indigo">AMAZON WEB SERVICES (AWS) · SEATTLE, WA</span>
+              <span class="badge-date">September 2023 - December 2023</span>
             </div>
-            <h3 class="project-title">Real-Time Fraud Detection System</h3>
-            <p class="project-desc">
+
+            <h3 class="card-project-title">Machine Learning Engineer Intern: CloudWatch AI Anomaly Detection</h3>
+            <p class="card-project-desc">
+              Built a serverless AI-driven anomaly detection engine for AWS CloudWatch, identifying infrastructure degradation with 97% precision. Designed an automated pipeline for petabyte-scale data using AWS Glue and Redshift, cutting manual intervention by 85%.
+            </p>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SERVERLESS ANOMALY PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">CloudWatch Streams</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">AWS Glue &amp; Redshift</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">SageMaker ML Engine</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">EventBridge Alerting</span>
+              </div>
+            </div>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>AWS Rising Star Award</strong>
+                <p>Recognized with the official AWS Rising Star Award for outstanding contributions to cloud-native artificial intelligence solutions.</p>
+              </div>
+              <div class="spec-col">
+                <strong>40% Model Training Acceleration</strong>
+                <p>Enhanced AWS SageMaker hyperparameter tuning mechanics to systematically accelerate convergence across large workloads.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">AWS SageMaker</span>
+                <span class="tag-chip">CloudWatch</span>
+                <span class="tag-chip">AWS Glue</span>
+                <span class="tag-chip">Redshift</span>
+                <span class="tag-chip">TensorFlow</span>
+                <span class="tag-chip">Python</span>
+              </div>
+
+              <div class="card-cta-group">
+                <button type="button" class="btn-card-spec" data-modal="modal-aws">
+                  <span>Architecture Specs</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section class="section-projects" id="projects">
+      <div class="site-container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-kicker">ENGINEERING SHOWCASE</span>
+          <h2 class="section-heading">Featured Systems &amp; Projects</h2>
+          <p class="section-subheading">
+            Decoupled architectures, algorithmic navigation, and distributed data systems.
+          </p>
+
+          <div class="project-filter-pills" role="tablist" aria-label="Filter projects">
+            <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All Systems</button>
+            <button type="button" class="filter-pill" data-filter="autonomous" role="tab" aria-selected="false">Autonomous &amp; Robotics</button>
+            <button type="button" class="filter-pill" data-filter="systems" role="tab" aria-selected="false">Distributed &amp; Cloud</button>
+            <button type="button" class="filter-pill" data-filter="apps" role="tab" aria-selected="false">Applied AI</button>
+          </div>
+        </div>
+
+        <div class="projects-grid-container">
+          <!-- Project 1: Self-Driving Car Simulation -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="autonomous">
+            <div class="card-badge-row">
+              <span class="badge-indigo">AUTONOMOUS VEHICLES</span>
+              <span class="badge-date">Demonstrated at IIT Bombay</span>
+            </div>
+
+            <h3 class="card-project-title">Self-Driving Car Simulation &amp; Trajectory Planner</h3>
+            <p class="card-project-desc">
+              Full-stack self-driving vehicle simulation built in Unity with a Python backend. Features convolutional neural networks for road sign and vehicle detection paired with A* path planning for collision-free trajectory navigation.
+            </p>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">Sensor Ingestion</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">CNN Classification</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">A* Trajectory Planner</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Unity Physics Actuation</span>
+              </div>
+            </div>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>Convolutional Neural Networks</strong>
+                <p>Trained to detect and classify road signs, pedestrians, and surrounding vehicles with low latency.</p>
+              </div>
+              <div class="spec-col">
+                <strong>A* Search Navigation</strong>
+                <p>Heuristic obstacle avoidance algorithm ensuring dynamic collision-free vehicle trajectory execution.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">Unity</span>
+                <span class="tag-chip">Python</span>
+                <span class="tag-chip">TensorFlow</span>
+                <span class="tag-chip">A* Search</span>
+                <span class="tag-chip">CNN</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Real-Time Fraud Detection System -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="systems">
+            <div class="card-badge-row">
+              <span class="badge-indigo">DISTRIBUTED PIPELINES</span>
+              <span class="badge-date">20M+ Transactions / Day</span>
+            </div>
+
+            <h3 class="card-project-title">Real-Time Financial Fraud Detection Pipeline</h3>
+            <p class="card-project-desc">
               High-throughput machine learning pipeline capable of analyzing 20 million daily financial transactions with 99% accuracy. Deployed on AWS microservices with real-time alerting to Slack and security teams.
             </p>
-            <div class="project-tech">
-              <span>TensorFlow</span>
-              <span>PySpark</span>
-              <span>AWS Microservices</span>
-              <span>Kafka</span>
-              <span>Python</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">Transaction Stream</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">PySpark Windowing</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">TensorFlow Scorer</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Slack / Email Alerting</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">Processes 20M+ Transactions Daily</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>99% Anomaly Accuracy</strong>
+                <p>Trained classification models running inference on streaming financial transactions with minimal false positives.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Microservices on AWS</strong>
+                <p>Decoupled architecture handling massive throughput surges with zero queue blockages.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">TensorFlow</span>
+                <span class="tag-chip">PySpark</span>
+                <span class="tag-chip">AWS Microservices</span>
+                <span class="tag-chip">Kafka</span>
+                <span class="tag-chip">Python</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- 3. Autonomous Delivery Drone System -->
-          <article class="project-card" data-category="ai-robotics">
-            <div class="project-header">
-              <span class="project-num">SYS-03</span>
-              <span class="project-cat">Robotics</span>
+          <!-- Project 3: Autonomous Delivery Drone System -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="autonomous">
+            <div class="card-badge-row">
+              <span class="badge-indigo">ROBOTICS &amp; SENSORS</span>
+              <span class="badge-date">Best Innovation Award</span>
             </div>
-            <h3 class="project-title">Autonomous Delivery Drone System</h3>
-            <p class="project-desc">
+
+            <h3 class="card-project-title">Autonomous Delivery Drone LiDAR Navigation</h3>
+            <p class="card-project-desc">
               Flight control software for autonomous aerial drones utilizing ROS and Python. Incorporates real-time obstacle avoidance algorithms reading raw LiDAR sensor point clouds for dynamic path re-routing.
             </p>
-            <div class="project-tech">
-              <span>ROS</span>
-              <span>Python</span>
-              <span>LiDAR</span>
-              <span>Point Cloud</span>
-              <span>Sensor Fusion</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">3D LiDAR Sensor</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Point Cloud Processing</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">ROS Obstacle Clustering</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Dynamic Flight Control</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">Recipient of Best Innovation Award</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>Real-Time LiDAR Avoidance</strong>
+                <p>Processes raw spatial point clouds to recognize static and dynamic flight obstacles in sub-50ms cycles.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Best Innovation Award</strong>
+                <p>Demonstrated at technical conference and recognized with first-place honor for robotics innovation.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">ROS</span>
+                <span class="tag-chip">Python</span>
+                <span class="tag-chip">LiDAR</span>
+                <span class="tag-chip">Sensor Fusion</span>
+                <span class="tag-chip">Robotics</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- 4. Blockchain Voting Platform -->
-          <article class="project-card" data-category="systems-cloud">
-            <div class="project-header">
-              <span class="project-num">SYS-04</span>
-              <span class="project-cat">Decentralized Systems</span>
+          <!-- Project 4: Blockchain Voting Platform -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="systems">
+            <div class="card-badge-row">
+              <span class="badge-indigo">DECENTRALIZED SYSTEMS</span>
+              <span class="badge-date">Tamper-Proof Auditability</span>
             </div>
-            <h3 class="project-title">Blockchain-Based Voting System</h3>
-            <p class="project-desc">
+
+            <h3 class="card-project-title">Cryptographic Blockchain-Based Voting Platform</h3>
+            <p class="card-project-desc">
               Tamper-proof electronic voting platform engineered using Solidity smart contracts on the Ethereum blockchain. Guarantees verifiable auditability and transparent cryptographic vote records.
             </p>
-            <div class="project-tech">
-              <span>Solidity</span>
-              <span>Ethereum</span>
-              <span>Smart Contracts</span>
-              <span>Web3.js</span>
-              <span>Cryptography</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">Voter Credential</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Cryptographic Hash</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Solidity Smart Contract</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Public Ethereum Ledger</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">Cryptographic Public Auditability</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>Cryptographic Immutability</strong>
+                <p>Stores votes as immutable on-chain transactions, making vote tampering computationally impossible.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Public Audit Trail</strong>
+                <p>Demonstrated to industry leaders and published results in technical review documentation.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">Solidity</span>
+                <span class="tag-chip">Ethereum</span>
+                <span class="tag-chip">Smart Contracts</span>
+                <span class="tag-chip">Web3.js</span>
+                <span class="tag-chip">Cryptography</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- 5. AI Personal Assistant -->
-          <article class="project-card" data-category="apps">
-            <div class="project-header">
-              <span class="project-num">SYS-05</span>
-              <span class="project-cat">Conversational AI</span>
+          <!-- Project 5: AI Personal Assistant -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="apps">
+            <div class="card-badge-row">
+              <span class="badge-indigo">CONVERSATIONAL AI</span>
+              <span class="badge-date">&lt;1s Latency at Scale</span>
             </div>
-            <h3 class="project-title">AI Personal Assistant</h3>
-            <p class="project-desc">
-              Voice and chat intelligent assistant integrating GPT-based language models with speech-to-text engines. Connects directly to Google Calendar, Spotify, and OpenWeather APIs with sub-second query response times.
+
+            <h3 class="card-project-title">AI-Powered Personal Assistant (Voice &amp; Chat)</h3>
+            <p class="card-project-desc">
+              Voice and chat intelligent assistant integrating GPT language models with speech-to-text engines. Connects directly to Google Calendar, Spotify, and OpenWeather APIs with sub-second query response times.
             </p>
-            <div class="project-tech">
-              <span>React Native</span>
-              <span>Flask</span>
-              <span>OpenAI API</span>
-              <span>Speech-to-Text</span>
-              <span>REST APIs</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">Voice / Text Input</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Speech-to-Text &amp; GPT</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">External API Hub</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">Synthesized Response</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">1,000+ Concurrent Queries with &lt;1s Latency</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>1,000+ Concurrent Queries</strong>
+                <p>Engineered async backend to maintain latency under one second under concurrent query loads.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Multi-Service Integration</strong>
+                <p>Direct API synchronization with calendar scheduling, streaming audio, and weather services.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">React Native</span>
+                <span class="tag-chip">Flask</span>
+                <span class="tag-chip">OpenAI API</span>
+                <span class="tag-chip">Speech-to-Text</span>
+                <span class="tag-chip">REST APIs</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- 6. AI Resume Reviewer -->
-          <article class="project-card" data-category="apps">
-            <div class="project-header">
-              <span class="project-num">SYS-06</span>
-              <span class="project-cat">Applied AI</span>
+          <!-- Project 6: AI Resume Reviewer -->
+          <article class="stripe-project-card reveal-on-scroll" data-category="apps">
+            <div class="card-badge-row">
+              <span class="badge-indigo">APPLIED MACHINE LEARNING</span>
+              <span class="badge-date">1,000+ Resumes Processed</span>
             </div>
-            <h3 class="project-title">AI-Driven Resume Reviewer</h3>
-            <p class="project-desc">
+
+            <h3 class="card-project-title">AI-Driven Resume Reviewer &amp; ATS Optimizer</h3>
+            <p class="card-project-desc">
               Automated recruitment tool providing real-time evaluation of resume structure, semantic keyword density, and ATS compliance using language models and Elasticsearch indexing.
             </p>
-            <div class="project-tech">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>Elasticsearch</span>
-              <span>OpenAI API</span>
-              <span>AWS</span>
+
+            <div class="pipeline-blueprint">
+              <span class="blueprint-tag">SYSTEM EXECUTION PIPELINE</span>
+              <div class="pipeline-flow">
+                <span class="pipe-node">PDF Parser</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node pipe-highlight">Elasticsearch Index</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">OpenAI Semantic Scoring</span>
+                <span class="pipe-sep">→</span>
+                <span class="pipe-node">ATS Compliance Report</span>
+              </div>
             </div>
-            <div class="project-footer">
-              <span class="project-metric">Analyzed 1,000+ Resumes at Career Fair</span>
+
+            <div class="card-specs-row">
+              <div class="spec-col">
+                <strong>Elasticsearch Tokenizer</strong>
+                <p>High-speed token indexing and inverted keyword matching paired with semantic language understanding.</p>
+              </div>
+              <div class="spec-col">
+                <strong>Career Fair Demonstration</strong>
+                <p>Hosted on AWS and successfully evaluated over 1,000 attendee resumes in real time during a major career fair.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="tech-tags">
+                <span class="tag-chip">React</span>
+                <span class="tag-chip">Node.js</span>
+                <span class="tag-chip">Elasticsearch</span>
+                <span class="tag-chip">OpenAI API</span>
+                <span class="tag-chip">AWS</span>
+              </div>
+
+              <div class="card-cta-group">
+                <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="link-card-github">
+                  <span>GitHub Repository</span>
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Technical Expertise -->
-    <section id="skills" class="section skills-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">03 / Competency Matrix</span>
-          <h2 class="section-title">Technical Expertise</h2>
+    <!-- Engineering Methodology: Core Architecture Principles -->
+    <section class="section-philosophy" id="philosophy">
+      <div class="site-container">
+        <div class="section-header-left reveal-on-scroll">
+          <span class="section-kicker">ENGINEERING VALUES</span>
+          <h2 class="section-heading">Core Architecture Principles</h2>
+          <p class="section-subheading">
+            The foundational engineering rules guiding how I design and construct software systems.
+          </p>
         </div>
-        <div class="skills-matrix">
-          <div class="skill-category">
-            <h3 class="skill-group-title">Languages</h3>
-            <div class="skill-items">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">Go / Rust</span>
-              <span class="skill-chip">C++</span>
-              <span class="skill-chip">Java</span>
-              <span class="skill-chip">JavaScript</span>
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">HTML &amp; CSS</span>
-              <span class="skill-chip">PHP</span>
-            </div>
-          </div>
 
-          <div class="skill-category">
-            <h3 class="skill-group-title">Cloud, Distributed Systems &amp; DevOps</h3>
-            <div class="skill-items">
-              <span class="skill-chip">Kubernetes</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">AWS (SageMaker, Glue, Redshift, CloudWatch)</span>
-              <span class="skill-chip">Azure</span>
-              <span class="skill-chip">Jenkins</span>
-              <span class="skill-chip">CI/CD Automation</span>
-              <span class="skill-chip">Git / GitHub</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3 class="skill-group-title">Machine Learning &amp; AI</h3>
-            <div class="skill-items">
-              <span class="skill-chip">TensorFlow</span>
-              <span class="skill-chip">PyTorch</span>
-              <span class="skill-chip">Deep Reinforcement Learning</span>
-              <span class="skill-chip">Keras</span>
-              <span class="skill-chip">HuggingFace</span>
-              <span class="skill-chip">Scikit-Learn</span>
-              <span class="skill-chip">Computer Vision (CNN)</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3 class="skill-group-title">Data Engineering &amp; Frameworks</h3>
-            <div class="skill-items">
-              <span class="skill-chip">Apache Spark</span>
-              <span class="skill-chip">PostgreSQL</span>
-              <span class="skill-chip">MongoDB</span>
-              <span class="skill-chip">Redis</span>
-              <span class="skill-chip">Elasticsearch</span>
-              <span class="skill-chip">Node.js</span>
-              <span class="skill-chip">React</span>
-              <span class="skill-chip">Django &amp; Flask</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Academic Foundation & About -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">04 / Academic Foundation</span>
-          <h2 class="section-title">Education and Leadership</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-content">
-            <div class="about-author-header">
-              <div class="author-avatar-wrapper">
-                <img src="laraib_pic.jpg" alt="Muhammad Laraib Jamal" class="author-avatar-img">
-              </div>
-              <div class="author-meta">
-                <h3 class="author-name">Muhammad Laraib Jamal</h3>
-                <span class="author-role">Systems &amp; Autonomous AI Engineer</span>
-                <span class="author-location">Prayagraj, India &bull; NIE Mysore (9.7 CGPA)</span>
-              </div>
-            </div>
-            <p>
-              I build software where low-latency performance, algorithmic precision, and distributed stability intersect. My engineering experience ranges from container orchestration algorithms at the Linux Foundation CNCF to deep reinforcement learning simulation engines for autonomous vehicles.
+        <div class="principles-grid">
+          <div class="principle-box reveal-on-scroll">
+            <div class="principle-index">01</div>
+            <h3 class="principle-name">High-Concurrency Distributed Reliability</h3>
+            <p class="principle-desc">
+              Designing stateless microservices, decoupled queues, and adaptive autoscaling thresholds that handle volatile traffic spikes without degraded response times or orphaned tasks.
             </p>
-            <div class="education-card">
-              <div class="edu-header">
-                <h3>National Institute of Engineering, Mysore</h3>
-                <span class="edu-period">2024 - 2028</span>
-              </div>
-              <p class="edu-degree">Bachelor of Engineering: Computer Science and Engineering</p>
-              <p class="edu-metric">Academic Standing: 9.7 CGPA</p>
-              <div class="coursework-tags">
-                <span class="tag">Advanced Algorithms</span>
-                <span class="tag">Artificial Intelligence</span>
-                <span class="tag">Distributed Systems</span>
-                <span class="tag">Operating Systems</span>
-                <span class="tag">Cloud Computing</span>
-                <span class="tag">Cybersecurity</span>
-                <span class="tag">Software Design Patterns</span>
-              </div>
+            <div class="principle-label">Implemented in Kubernetes core autoscaling algorithms</div>
+          </div>
+
+          <div class="principle-box reveal-on-scroll">
+            <div class="principle-index">02</div>
+            <h3 class="principle-name">Closed-Loop Autonomous Simulation</h3>
+            <p class="principle-desc">
+              Validating vehicle and drone decision policies in high-fidelity synthetic simulations before deploying to physical hardware. Ensures zero regression across rare edge case maneuvers.
+            </p>
+            <div class="principle-label">Implemented in Tesla vehicle simulation platform</div>
+          </div>
+
+          <div class="principle-box reveal-on-scroll">
+            <div class="principle-index">03</div>
+            <h3 class="principle-name">Automated Petabyte Ingestion Pipelines</h3>
+            <p class="principle-desc">
+              Replacing brittle manual data processes with automated distributed transforms (Apache Spark, AWS Glue, Redshift) capable of vectorizing sensor streams at scale.
+            </p>
+            <div class="principle-label">Implemented in AWS CloudWatch anomaly detection</div>
+          </div>
+
+          <div class="principle-box reveal-on-scroll">
+            <div class="principle-index">04</div>
+            <h3 class="principle-name">Algorithmic Precision &amp; Bounds Verification</h3>
+            <p class="principle-desc">
+              Engineering with strict time and auxiliary space complexity bounds. Leveraging A* search heuristics and deep reinforcement learning policies with mathematically validated state transitions.
+            </p>
+            <div class="principle-label">Demonstrated across robotics &amp; AI systems</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section-skills" id="skills">
+      <div class="site-container">
+        <div class="section-header-left reveal-on-scroll">
+          <span class="section-kicker">TECHNICAL STACK</span>
+          <h2 class="section-heading">Skills &amp; Competencies</h2>
+          <p class="section-subheading">
+            A structured breakdown of programming languages, distributed infrastructure, machine learning frameworks, and data platforms.
+          </p>
+        </div>
+
+        <div class="skills-grid-wrapper">
+          <div class="skills-card-col reveal-on-scroll">
+            <div class="col-heading">Programming Languages</div>
+            <ul class="col-list">
+              <li>
+                <strong>Python</strong>
+                <span>Distributed data pipelines, PyTorch, TensorFlow, ROS automation, scripting</span>
+              </li>
+              <li>
+                <strong>Go &amp; Rust</strong>
+                <span>High-performance concurrency, Kubernetes controllers, low-latency microservices</span>
+              </li>
+              <li>
+                <strong>C++</strong>
+                <span>Robotics algorithms, sensor processing, computer graphics, memory control</span>
+              </li>
+              <li>
+                <strong>Java</strong>
+                <span>Object-Oriented Design, multithreading, enterprise backend services</span>
+              </li>
+              <li>
+                <strong>JavaScript &amp; TypeScript</strong>
+                <span>Full-stack web applications, React.js, Node.js, asynchronous I/O</span>
+              </li>
+              <li>
+                <strong>SQL</strong>
+                <span>Relational modeling, indexing, query optimization, ACID transactions</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-card-col reveal-on-scroll">
+            <div class="col-heading">Cloud &amp; Distributed Systems</div>
+            <ul class="col-list">
+              <li>
+                <strong>Kubernetes</strong>
+                <span>Autoscaling algorithms, custom controllers, container orchestration, HPA</span>
+              </li>
+              <li>
+                <strong>Docker</strong>
+                <span>Containerization, multi-stage images, production workload isolation</span>
+              </li>
+              <li>
+                <strong>Amazon Web Services (AWS)</strong>
+                <span>SageMaker, CloudWatch, AWS Glue, Redshift, Lambda, S3, EC2</span>
+              </li>
+              <li>
+                <strong>CI/CD &amp; DevOps</strong>
+                <span>Jenkins, GitHub Actions, automated regression testing, deployment pipelines</span>
+              </li>
+              <li>
+                <strong>Distributed Consensus</strong>
+                <span>Raft, Paxos, event stream processing, microservices communication</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-card-col reveal-on-scroll">
+            <div class="col-heading">Machine Learning &amp; AI</div>
+            <ul class="col-list">
+              <li>
+                <strong>PyTorch &amp; TensorFlow</strong>
+                <span>Deep neural network training, model evaluation, inference optimization</span>
+              </li>
+              <li>
+                <strong>Deep Reinforcement Learning</strong>
+                <span>Policy gradients, Q-learning, vehicle simulation decision control</span>
+              </li>
+              <li>
+                <strong>Computer Vision (CNN)</strong>
+                <span>Object detection, road sign classification, spatial feature extraction</span>
+              </li>
+              <li>
+                <strong>HuggingFace &amp; Keras</strong>
+                <span>Transformer architectures, NLP fine-tuning, embedding matching</span>
+              </li>
+              <li>
+                <strong>Scikit-Learn</strong>
+                <span>Classification, regression, anomaly detection, feature engineering</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-card-col reveal-on-scroll">
+            <div class="col-heading">Data Engineering &amp; Stores</div>
+            <ul class="col-list">
+              <li>
+                <strong>Apache Spark</strong>
+                <span>Distributed ETL, streaming telemetry processing, 50TB+ data pipelines</span>
+              </li>
+              <li>
+                <strong>PostgreSQL &amp; MySQL</strong>
+                <span>Relational databases, foreign keys, partition tables, high reliability</span>
+              </li>
+              <li>
+                <strong>MongoDB &amp; Firebase</strong>
+                <span>Document databases, real-time sync, schema flexibility</span>
+              </li>
+              <li>
+                <strong>Redis &amp; Elasticsearch</strong>
+                <span>In-memory caching, pub/sub, inverted index full-text search</span>
+              </li>
+              <li>
+                <strong>Web Frameworks</strong>
+                <span>React, Node.js, Django, Flask, RESTful microservices</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section-education" id="education">
+      <div class="site-container">
+        <div class="section-header-left reveal-on-scroll">
+          <span class="section-kicker">ACADEMIC BACKGROUND</span>
+          <h2 class="section-heading">Education &amp; Leadership</h2>
+        </div>
+
+        <div class="education-stripe-panel reveal-on-scroll">
+          <div class="edu-top-row">
+            <div>
+              <h3 class="edu-degree-title">Bachelor of Engineering (B.E.) in Computer Science and Engineering</h3>
+              <div class="edu-school-name">The National Institute of Engineering (NIE), Mysore</div>
+            </div>
+            <div class="edu-cgpa-pill">
+              <span class="cgpa-caption">CGPA</span>
+              <span class="cgpa-digits">9.7 / 10.0</span>
             </div>
           </div>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <div class="highlight-icon">01</div>
-              <div>
-                <h4>Club President &amp; Speaker</h4>
-                <p>President of Computer Science Club, organizing weekly workshops and mentoring over 100 student engineers.</p>
-              </div>
+
+          <div class="edu-timeline-strip">
+            <span>Batch: 2024 - 2028</span>
+            <span class="edu-bullet">•</span>
+            <span>Mysore, Karnataka, India</span>
+            <span class="edu-bullet">•</span>
+            <span class="edu-highlight">Top Academic Tier</span>
+          </div>
+
+          <p class="edu-summary-p">
+            Rigorous undergraduate training spanning distributed computing, advanced algorithms, machine learning, and operating systems. Maintaining exceptional academic ranking (9.7 CGPA).
+          </p>
+
+          <div class="coursework-box">
+            <div class="coursework-title">Relevant Coursework:</div>
+            <div class="coursework-badges">
+              <span class="course-chip">Advanced Algorithms</span>
+              <span class="course-chip">Artificial Intelligence</span>
+              <span class="course-chip">Distributed Systems</span>
+              <span class="course-chip">Operating Systems</span>
+              <span class="course-chip">Cloud Computing</span>
+              <span class="course-chip">Cybersecurity</span>
+              <span class="course-chip">Software Design Patterns</span>
+              <span class="course-chip">Database Systems</span>
             </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">02</div>
-              <div>
-                <h4>Technical Writing</h4>
-                <p>Authored 30+ comprehensive engineering deep-dives covering systems and algorithms, generating over 100k views.</p>
+          </div>
+
+          <div class="leadership-divider">
+            <div class="leadership-header">Campus Leadership &amp; Community Outreach:</div>
+            <div class="leadership-grid">
+              <div class="leadership-item">
+                <strong>President, Computer Science Club</strong>
+                <p>Organizing weekly technical workshops on distributed technologies and mentoring a community of 100+ student engineers.</p>
               </div>
-            </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">03</div>
-              <div>
-                <h4>STEM Community Outreach</h4>
-                <p>Volunteering to teach fundamental programming and algorithmic logic to high school students.</p>
+              <div class="leadership-item">
+                <strong>Technical Blogger</strong>
+                <p>Authored 30+ comprehensive engineering deep-dives covering systems, algorithms, and cloud infrastructure, generating 100k+ global readers.</p>
+              </div>
+              <div class="leadership-item">
+                <strong>Volunteer, STEM Outreach Program</strong>
+                <p>Teaching foundational programming and computational problem-solving to high school students to inspire future engineers.</p>
               </div>
             </div>
           </div>
@@ -592,124 +1090,213 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-      <div class="container contact-container">
-        <div class="section-header text-center">
-          <span class="section-tag">05 / Initiate Communication</span>
-          <h2 class="section-title">Let Us Build Something Significant</h2>
-          <p class="section-subtext">Open to distributed systems engineering, AI research, and high-impact infrastructure challenges.</p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-header-badge">
-            <img src="laraib_pic.jpg" alt="Muhammad Laraib Jamal" class="contact-avatar-img">
-            <div>
-              <h3 class="contact-author-name">Muhammad Laraib Jamal</h3>
-              <span class="contact-author-status">Available for Distributed Systems &amp; AI Engineering Roles</span>
+    <!-- Contact Section: Stripe Dark Blue Callout -->
+    <section class="section-contact" id="contact">
+      <div class="site-container">
+        <div class="contact-banner-card reveal-on-scroll">
+          <div class="contact-content-inner">
+            <span class="banner-kicker">READY TO CONNECT?</span>
+            <h2 class="banner-heading">Let us engineer high-scale systems together.</h2>
+            <p class="banner-sub">
+              Open to distributed systems engineering, cloud-native infrastructure, and autonomous AI research challenges.
+            </p>
+
+            <div class="banner-actions">
+              <a href="mailto:laraibaishah123@gmail.com" class="btn-banner-primary">
+                <span>Send Direct Email</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="laraib cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-banner-secondary">
+                <span>Download Resume (PDF)</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <button type="button" class="btn-banner-ghost copy-email-btn" data-email="laraibaishah123@gmail.com">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">Copy Email</span>
+              </button>
             </div>
-          </div>
-          <div class="contact-methods">
-            <div class="contact-row">
-              <span class="contact-label">Email:</span>
-              <a href="mailto:laraibaishah123@gmail.com" class="contact-val">laraibaishah123@gmail.com</a>
+
+            <div class="banner-links-row">
+              <a href="mailto:laraibaishah123@gmail.com" class="banner-link">laraibaishah123@gmail.com</a>
+              <span class="banner-sep">•</span>
+              <a href="tel:+919120888968" class="banner-link">+91 9120888968</a>
+              <span class="banner-sep">•</span>
+              <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="banner-link">github.com/vansh917917</a>
+              <span class="banner-sep">•</span>
+              <a href="https://linkedin.com/in/laraib-jamal" target="_blank" rel="noopener noreferrer" class="banner-link">linkedin.com/in/laraib-jamal</a>
+              <span class="banner-sep">•</span>
+              <span class="banner-location">Prayagraj, India</span>
             </div>
-            <div class="contact-row">
-              <span class="contact-label">Phone:</span>
-              <a href="tel:+919120888968" class="contact-val">+91 9120888968</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">Location:</span>
-              <span class="contact-val">Prayagraj, India</span>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">LinkedIn:</span>
-              <a href="https://linkedin.com/in/laraib-jamal" target="_blank" rel="noopener noreferrer" class="contact-val">linkedin.com/in/laraib-jamal</a>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">GitHub:</span>
-              <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/vansh917917</a>
-            </div>
-          </div>
-          <div class="contact-action-box">
-            <a href="mailto:laraibaishah123@gmail.com" class="btn btn-primary btn-large">Send Direct Email</a>
-            <button class="btn btn-secondary" id="copy-email-btn">Copy Email Address</button>
-            <span id="copy-status" class="copy-status" aria-live="polite"></span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Interactive Terminal Modal -->
-  <div class="terminal-modal" id="terminal-modal" role="dialog" aria-modal="true" aria-label="Interactive Command Terminal">
-    <div class="terminal-window">
-      <div class="terminal-header">
-        <div class="terminal-dots">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-        </div>
-        <span class="terminal-title">laraib@cluster-control:~ (vanilla js terminal)</span>
-        <button class="terminal-close-btn" id="terminal-close-btn" aria-label="Close Terminal">&times;</button>
-      </div>
-      <div class="terminal-quick-chips">
-        <button class="term-quick-chip" data-cmd="help">help</button>
-        <button class="term-quick-chip" data-cmd="cat resume">cat resume</button>
-        <button class="term-quick-chip" data-cmd="experience">experience</button>
-        <button class="term-quick-chip" data-cmd="projects">projects</button>
-        <button class="term-quick-chip" data-cmd="skills">skills</button>
-        <button class="term-quick-chip" data-cmd="benchmark">benchmark</button>
-        <button class="term-quick-chip" data-cmd="clear">clear</button>
-      </div>
-      <div class="terminal-body" id="terminal-output">
-        <div class="term-line term-line-info">Welcome to Muhammad Laraib Jamal's Interactive Console.</div>
-        <div class="term-line term-line-dim">Type 'help' to inspect commands, or 'cat resume' for full credentials. Press [Esc] to exit.</div>
-      </div>
-      <div class="terminal-footer">
-        <span class="term-prompt">&gt;</span>
-        <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (try 'help' or 'cat resume')..." autocomplete="off" spellcheck="false">
-      </div>
-    </div>
-  </div>
-
-  <!-- Architecture Blueprint Modal -->
-  <div class="blueprint-modal" id="blueprint-modal" role="dialog" aria-modal="true" aria-label="System Architecture Blueprint">
-    <div class="blueprint-window">
-      <div class="blueprint-header">
-        <div>
-          <span class="bp-modal-badge" id="bp-modal-company">System Architecture</span>
-          <h3 class="bp-modal-title" id="bp-modal-title">Architecture Blueprint</h3>
-        </div>
-        <button class="bp-close-btn" id="bp-close-btn" aria-label="Close Blueprint">&times;</button>
-      </div>
-      <div class="blueprint-meta-bar">
-        <div class="bp-metric-badge">
-          <span class="bp-metric-label">Key Metric:</span>
-          <span class="bp-metric-val" id="bp-modal-metric">--</span>
-        </div>
-        <p class="bp-modal-summary" id="bp-modal-summary">System overview description.</p>
-      </div>
-      <div class="blueprint-svg-container" id="bp-modal-svg"></div>
-      <div class="blueprint-nodes-grid" id="bp-modal-nodes"></div>
-    </div>
-  </div>
-
-  <!-- Footer -->
+  <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p class="footer-copy">&copy; 2026 Muhammad Laraib Jamal. Distributed Systems &amp; Autonomous AI.</p>
+    <div class="site-container footer-content">
+      <div class="footer-brand">
+        <span class="footer-name">Muhammad Laraib Jamal</span>
+        <span class="footer-inst">Computer Science &amp; Engineering · The National Institute of Engineering, Mysore</span>
+      </div>
+
       <div class="footer-links">
-        <a href="#hero">Back to Top</a>
-        <a href="laraib cv.pdf" target="_blank">Resume PDF</a>
-        <a href="https://github.com/vansh917917/portfolio-laraib" target="_blank" rel="noopener noreferrer">Source Repository</a>
+        <a href="https://github.com/vansh917917" target="_blank" rel="noopener noreferrer" class="footer-anchor">GitHub</a>
+        <span class="footer-divider">/</span>
+        <a href="https://linkedin.com/in/laraib-jamal" target="_blank" rel="noopener noreferrer" class="footer-anchor">LinkedIn</a>
+        <span class="footer-divider">/</span>
+        <a href="laraib cv.pdf" target="_blank" rel="noopener noreferrer" class="footer-anchor">Resume</a>
+        <span class="footer-divider">/</span>
+        <a href="#hero" class="footer-anchor scroll-top">Top ↑</a>
       </div>
     </div>
   </footer>
 
-  <!-- Vanilla Scripts -->
-  <script src="js/simulation.js"></script>
-  <script src="js/terminal.js"></script>
-  <script src="js/blueprints.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Architecture Specification Modals -->
+  <!-- Modal 1: Kubernetes Autoscaling -->
+  <div class="spec-modal" id="modal-kubernetes" role="dialog" aria-modal="true" aria-labelledby="modal-k8s-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <span class="modal-eyebrow">SYSTEM ARCHITECTURE</span>
+          <h3 class="modal-title" id="modal-k8s-title">Kubernetes: Core Autoscaling Algorithm</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4>Problem Statement &amp; Architectural Decision</h4>
+          <p>
+            Standard horizontal pod autoscaling often exhibits erratic oscillations under volatile traffic spikes, leading to over-provisioning and wasted cluster compute spend. This contribution engineered an adaptive scaling controller evaluating rolling variance to stabilize replica allocation.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Execution Flow Pipeline</h4>
+          <div class="modal-code">
+Cluster Telemetry (CPU, Memory, Network Queue Depth via cAdvisor / Metrics Server)
+       ↓
+Custom Autoscaling Algorithm (Evaluates rolling volatility against predictive sliding windows)
+       ↓
+Horizontal Pod Autoscaler (Issues declarative replica adjustments without restart latencies)
+       ↓
+Cluster Autoscaler Node Pool (Condenses under-utilized nodes and provisions compute instances)
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Production Impact</h4>
+          <p>
+            Validated in high-load production clusters, yielding a 30% boost in overall cluster compute efficiency and reducing enterprise deployment turnaround times by 20%. Adopted by over 10,000 developers worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Tesla -->
+  <div class="spec-modal" id="modal-tesla" role="dialog" aria-modal="true" aria-labelledby="modal-tesla-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <span class="modal-eyebrow">SYSTEM ARCHITECTURE</span>
+          <h3 class="modal-title" id="modal-tesla-title">Tesla: 50TB+ Fleet Ingestion &amp; Simulation</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4>Problem Statement &amp; Architectural Decision</h4>
+          <p>
+            Real-world driving safety validation requires re-testing rare physical edge cases without dangerous on-road testing. This system ingests fleet sensor telemetry, vectorizes edge conditions with Apache Spark, and re-synthesizes scenarios in Unity for closed-loop RL validation.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Execution Flow Pipeline</h4>
+          <div class="modal-code">
+Vehicle Sensor CAN Bus (Torque, Camera Vectors, Disengagement Triggers)
+       ↓
+Apache Spark Distributed ETL (Processes 50TB+ daily sensor streams)
+       ↓
+Unity 3D Scenario Generator (Synthesizes physical boundary edge cases)
+       ↓
+Deep RL Agent (Evaluates policy models with 25% higher decision accuracy)
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Results</h4>
+          <p>
+            Accelerated self-driving AI validation time-to-market by 20% and earned direct commendation from executive leadership for scalability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: AWS -->
+  <div class="spec-modal" id="modal-aws" role="dialog" aria-modal="true" aria-labelledby="modal-aws-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <span class="modal-eyebrow">SYSTEM ARCHITECTURE</span>
+          <h3 class="modal-title" id="modal-aws-title">AWS CloudWatch: Serverless AI Anomaly Detection</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4>Problem Statement &amp; Architectural Decision</h4>
+          <p>
+            At petabyte scale, static alerting thresholds flood on-call engineers with false alarms. This serverless ML pipeline processes real-time telemetry from AWS CloudWatch streams through Glue and Redshift into SageMaker, detecting degradation with 97% precision.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Execution Flow Pipeline</h4>
+          <div class="modal-code">
+CloudWatch Metric Streams
+       ↓
+AWS Glue &amp; Redshift Pipeline (Automated petabyte aggregation, -85% manual intervention)
+       ↓
+AWS SageMaker Hyperparameter Tuning (+40% convergence speed)
+       ↓
+Amazon EventBridge &amp; SNS (High-confidence alerts dispatched directly to on-call engineers)
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Honors</h4>
+          <p>
+            Recipient of the AWS Rising Star Award for outstanding contributions to cloud-native artificial intelligence solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite" hidden>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
