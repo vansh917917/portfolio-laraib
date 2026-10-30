@@ -1,3 +1,6 @@
 .DS_Store
 Thumbs.db
 *.log
+*.pem
+*.key
+id_rsa*
