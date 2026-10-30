@@ -3,14 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Laraib Jamal - Systems, Cloud-Native, and Machine Learning Engineer">
-  <title>Muhammad Laraib Jamal | Systems & ML Engineer</title>
+  <meta name="description" content="Muhammad Laraib Jamal - Distributed Systems, Cloud-Native, and Autonomous AI Engineer">
+  <title>Muhammad Laraib Jamal | Distributed Systems &amp; Autonomous AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- System Telemetry Bar -->
+  <aside class="telemetry-bar">
+    <div class="telemetry-inner">
+      <div class="telemetry-group">
+        <span class="telemetry-indicator online"></span>
+        <span class="telemetry-label">SYSTEM:</span>
+        <span class="telemetry-value">ONLINE / NOMINAL</span>
+      </div>
+      <div class="telemetry-group">
+        <span class="telemetry-label">FOCUS:</span>
+        <span class="telemetry-value">DISTRIBUTED SYSTEMS &amp; AUTONOMOUS AI</span>
+      </div>
+      <div class="telemetry-group desktop-only">
+        <span class="telemetry-label">LOCATION:</span>
+        <span class="telemetry-value">PRAYAGRAJ, IN</span>
+      </div>
+      <div class="telemetry-group desktop-only">
+        <span class="telemetry-label">P99 LATENCY:</span>
+        <span class="telemetry-value" id="telemetry-latency">2.1ms</span>
+      </div>
+      <div class="telemetry-group">
+        <span class="telemetry-label">LOCAL CLOCK:</span>
+        <span class="telemetry-value font-mono" id="telemetry-clock">--:--:--</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="#hero" class="brand-logo">
@@ -18,46 +46,54 @@
         <span class="logo-name">laraib.jamal</span>
       </a>
       <nav class="site-nav" id="site-nav">
-        <a href="#about" class="nav-link">About</a>
+        <a href="#playground" class="nav-link">Playground</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link nav-cta">Contact</a>
       </nav>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
+      <div class="header-tools">
+        <button class="terminal-trigger-btn" id="terminal-open-btn" aria-label="Open Interactive Terminal">
+          <span class="term-key-badge">Ctrl+K</span>
+          <span class="term-btn-text">Terminal</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="hero" class="section hero-section">
       <div class="container hero-container">
         <div class="hero-badge">
           <span class="status-pulse"></span>
-          <span>Distributed Systems &amp; Autonomous AI</span>
+          <span>Open-Source Contributor &amp; Systems Engineer</span>
         </div>
         <h1 class="hero-title">
-          Engineering high-scale distributed systems and intelligent autonomous machines.
+          Architecting resilient distributed systems and autonomous machine intelligence.
         </h1>
         <p class="hero-subtitle">
-          Hi, I am Muhammad Laraib Jamal. A Computer Science Engineer with contributions to Kubernetes core autoscaling, autonomous vehicle simulations at Tesla, and serverless AI systems at AWS.
+          I am Muhammad Laraib Jamal. Specializing in high-throughput cloud infrastructure, Kubernetes core autoscaling, and real-time autonomous vehicle simulation platforms.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Explore Projects</a>
-          <a href="#experience" class="btn btn-secondary">View Experience</a>
+          <a href="#playground" class="btn btn-primary">Test Live Simulations</a>
+          <a href="#experience" class="btn btn-secondary">Track Record</a>
           <a href="laraib cv.pdf" target="_blank" class="btn btn-ghost">Download Resume (PDF)</a>
         </div>
         <div class="hero-stats">
           <div class="stat-card">
             <span class="stat-value">30%</span>
-            <span class="stat-label">Cluster Efficiency Gain (Kubernetes)</span>
+            <span class="stat-label">Kubernetes Cluster Efficiency Gain</span>
           </div>
           <div class="stat-card">
             <span class="stat-value">50TB+</span>
-            <span class="stat-label">Daily Fleet Data Handled (Tesla)</span>
+            <span class="stat-label">Daily Fleet Sensor Data (Tesla)</span>
           </div>
           <div class="stat-card">
             <span class="stat-value">97%</span>
@@ -71,107 +107,141 @@
       </div>
     </section>
 
-    <section id="about" class="section about-section">
+    <!-- Interactive Simulation Playground -->
+    <section id="playground" class="section playground-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">01 / Profile</span>
-          <h2 class="section-title">Background and Academic Foundation</h2>
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-tag">Interactive Simulation Engine</span>
+            <h2 class="section-title">Live Systems Playground</h2>
+            <p class="section-subtext">Run real-time algorithmic simulations directly in your browser with zero dependencies.</p>
+          </div>
+          <div class="sim-tab-controls">
+            <button class="sim-tab-btn active" id="tab-btn-k8s" data-target="k8s">Kubernetes Autoscaler</button>
+            <button class="sim-tab-btn" id="tab-btn-astar" data-target="astar">Autonomous A* Pathfinding</button>
+          </div>
         </div>
-        <div class="about-grid">
-          <div class="about-content">
-            <p>
-              I specialize in systems architecture, container orchestration, machine learning pipelines, and robotics. My work spans from optimizing autoscaling algorithms in Kubernetes to building deep reinforcement learning models for vehicle control systems.
-            </p>
-            <p>
-              Currently pursuing a B.E. in Computer Science and Engineering at the National Institute of Engineering, Mysore, holding a 9.7 CGPA. I actively lead student engineering initiatives, publish deep-dive technical articles, and mentor upcoming developers.
-            </p>
-            <div class="education-card">
-              <div class="edu-header">
-                <h3>National Institute of Engineering, Mysore</h3>
-                <span class="edu-period">2024 - 2028</span>
+
+        <!-- Simulation View 1: Kubernetes Autoscaling -->
+        <div class="sim-panel active" id="sim-panel-k8s">
+          <div class="sim-canvas-wrapper">
+            <div class="sim-canvas-header">
+              <div class="sim-title-group">
+                <span class="sim-badge">TOPOLOGY VISUALIZER</span>
+                <span class="sim-legend">Target CPU: 70% | Pod Limit: 4/Node</span>
               </div>
-              <p class="edu-degree">Bachelor of Engineering: Computer Science and Engineering</p>
-              <p class="edu-metric">Academic Score: 9.7 CGPA</p>
-              <div class="coursework-tags">
-                <span class="tag">Advanced Algorithms</span>
-                <span class="tag">Artificial Intelligence</span>
-                <span class="tag">Distributed Systems</span>
-                <span class="tag">Cloud Computing</span>
-                <span class="tag">Cybersecurity</span>
-                <span class="tag">Software Design Patterns</span>
+              <div class="sim-live-stats">
+                <span class="sim-stat-pill">Load: <strong id="sim-metric-load">45%</strong></span>
+                <span class="sim-stat-pill">Pods: <strong id="sim-metric-pods">6 active</strong></span>
+                <span class="sim-stat-pill">Nodes: <strong id="sim-metric-nodes">2 nodes</strong></span>
+                <span class="sim-stat-pill">State: <strong id="sim-metric-status">Stable</strong></span>
+              </div>
+            </div>
+            <div class="canvas-container">
+              <canvas id="k8s-canvas"></canvas>
+            </div>
+            <div class="sim-controls">
+              <div class="control-group">
+                <label for="k8s-traffic-slider">Inject Cluster Traffic Load:</label>
+                <input type="range" id="k8s-traffic-slider" min="15" max="95" value="45" class="custom-slider">
+                <span id="slider-val-label" class="slider-badge">45%</span>
+              </div>
+              <div class="control-actions">
+                <button class="btn btn-secondary btn-sm" id="btn-spike-traffic">Simulate Traffic Spike (90%)</button>
+                <button class="btn btn-secondary btn-sm" id="btn-throttle-traffic">Throttle Down (20%)</button>
+                <button class="btn btn-ghost btn-sm" id="btn-reset-cluster">Reset Topology</button>
               </div>
             </div>
           </div>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <div class="highlight-icon">01</div>
-              <div>
-                <h4>Leadership and Outreach</h4>
-                <p>President of Computer Science Club, organizing technical workshops for over 100 student engineers.</p>
+          <div class="sim-annotation">
+            <strong>Engineering Context:</strong> Reflects Muhammad's contribution to Kubernetes core autoscaling algorithms, where dynamic cluster telemetry regulates horizontal pod scaling and node packing to save cloud infrastructure spend under erratic traffic.
+          </div>
+        </div>
+
+        <!-- Simulation View 2: A* Autonomous Navigation Grid -->
+        <div class="sim-panel" id="sim-panel-astar">
+          <div class="sim-canvas-wrapper">
+            <div class="sim-canvas-header">
+              <div class="sim-title-group">
+                <span class="sim-badge">PATH PLANNING ENGINE</span>
+                <span class="sim-legend">Green: Vehicle | Red: Goal | Cyan: A* Path</span>
+              </div>
+              <div class="sim-live-stats">
+                <span class="sim-stat-pill">Path Length: <strong id="path-metric-length">--</strong></span>
+                <span class="sim-stat-pill">Nodes Explored: <strong id="path-metric-nodes">--</strong></span>
               </div>
             </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">02</div>
-              <div>
-                <h4>Technical Writing</h4>
-                <p>Authored 30+ comprehensive engineering deep-dives covering systems and algorithms, reaching 100k+ readers worldwide.</p>
+            <div class="canvas-container">
+              <canvas id="astar-canvas"></canvas>
+            </div>
+            <div class="sim-controls astar-controls">
+              <p class="canvas-hint">Click or drag anywhere on the grid to create or remove obstacles.</p>
+              <div class="control-actions">
+                <button class="btn btn-primary btn-sm" id="btn-run-astar">Re-Compute Path</button>
+                <button class="btn btn-secondary btn-sm" id="btn-random-walls">Generate Random Obstacles</button>
+                <button class="btn btn-ghost btn-sm" id="btn-clear-walls">Clear Grid</button>
               </div>
             </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">03</div>
-              <div>
-                <h4>STEM Mentorship</h4>
-                <p>Dedicated volunteer delivering programming and computational thinking lessons to high school students.</p>
-              </div>
-            </div>
+          </div>
+          <div class="sim-annotation">
+            <strong>Engineering Context:</strong> Implements the foundational A* search and heuristic collision-avoidance logic utilized in Muhammad's self-driving vehicle simulation and autonomous drone LiDAR navigation systems.
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Professional Experience -->
     <section id="experience" class="section experience-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">02 / Track Record</span>
+          <span class="section-tag">01 / Engineering Track Record</span>
           <h2 class="section-title">Professional Experience</h2>
         </div>
         <div class="timeline">
+          <!-- Kubernetes -->
           <article class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-role">Principal Contributor</span>
               <span class="timeline-company">Kubernetes (CNCF)</span>
               <span class="timeline-date">September 2024 - Present</span>
+              <button class="blueprint-link-btn" data-blueprint="kubernetes">
+                <span class="bp-icon">&#9655;</span> Inspect Autoscaler Blueprint
+              </button>
             </div>
             <div class="timeline-details">
               <ul class="bullet-list">
-                <li>Led the development of a new autoscaling algorithm for Kubernetes, boosting cluster efficiency by 30% in high-load production environments.</li>
+                <li>Led the development of a new autoscaling algorithm for Kubernetes, improving cluster efficiency by 30% in high-load production environments.</li>
                 <li>Contributed to core networking enhancements, reducing deployment turnaround time for global enterprises by 20%.</li>
-                <li>Authored in-depth technical documentation and reference implementations adopted by over 10,000 developers globally.</li>
-                <li>Presented architectural paradigms on the future of container orchestration at KubeCon.</li>
+                <li>Authored in-depth technical documentation and tutorials adopted by over 10,000 developers worldwide.</li>
+                <li>Delivered technical presentation at KubeCon on the architecture of container orchestration, earning standing ovation from attendees.</li>
               </ul>
               <div class="tech-stack-row">
                 <span class="tech-pill">Kubernetes</span>
                 <span class="tech-pill">Go</span>
-                <span class="tech-pill">Distributed Systems</span>
                 <span class="tech-pill">Cloud-Native</span>
                 <span class="tech-pill">Docker</span>
+                <span class="tech-pill">Distributed Consensus</span>
               </div>
             </div>
           </article>
 
+          <!-- Tesla -->
           <article class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-role">Junior Developer Intern</span>
               <span class="timeline-company">Tesla</span>
               <span class="timeline-location">Palo Alto, CA</span>
               <span class="timeline-date">Summer 2023</span>
+              <button class="blueprint-link-btn" data-blueprint="tesla">
+                <span class="bp-icon">&#9655;</span> Inspect Telemetry Blueprint
+              </button>
             </div>
             <div class="timeline-details">
               <ul class="bullet-list">
-                <li>Designed and implemented an autonomous vehicle simulation platform testing edge cases for self-driving AI, reducing time-to-market by 20%.</li>
+                <li>Designed and implemented an autonomous vehicle simulation platform testing edge cases for self-driving AI, reducing validation time-to-market by 20%.</li>
                 <li>Integrated deep reinforcement learning models into vehicle control systems, achieving a 25% improvement in decision-making accuracy.</li>
                 <li>Optimized fleet telemetry data processing pipelines using Apache Spark, processing over 50TB of daily sensor data.</li>
-                <li>Presented the simulation platform directly to executive leadership, earning commendations for innovation and platform scalability.</li>
+                <li>Presented the simulation platform directly to executive leadership, receiving direct commendation for technical innovation and platform scalability.</li>
               </ul>
               <div class="tech-stack-row">
                 <span class="tech-pill">Python</span>
@@ -183,26 +253,29 @@
             </div>
           </article>
 
+          <!-- AWS -->
           <article class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-role">Machine Learning Engineer Intern</span>
               <span class="timeline-company">Amazon Web Services (AWS)</span>
               <span class="timeline-location">Seattle, WA</span>
               <span class="timeline-date">September 2023 - December 2023</span>
+              <button class="blueprint-link-btn" data-blueprint="aws">
+                <span class="bp-icon">&#9655;</span> Inspect Anomaly Blueprint
+              </button>
             </div>
             <div class="timeline-details">
               <ul class="bullet-list">
                 <li>Built a serverless AI anomaly detection engine for AWS CloudWatch, identifying infrastructure degradation with 97% precision.</li>
                 <li>Engineered an automated data pipeline using AWS Glue and Redshift, cutting manual intervention by 85% across petabyte datasets.</li>
                 <li>Enhanced SageMaker hyperparameter tuning mechanisms, accelerating model training speeds by 40%.</li>
-                <li>Awarded the AWS Rising Star Award for contributions to cloud-native AI infrastructure.</li>
+                <li>Awarded the AWS Rising Star Award for outstanding contributions to cloud-native AI infrastructure.</li>
               </ul>
               <div class="tech-stack-row">
                 <span class="tech-pill">AWS SageMaker</span>
                 <span class="tech-pill">CloudWatch</span>
                 <span class="tech-pill">AWS Glue</span>
                 <span class="tech-pill">Redshift</span>
-                <span class="tech-pill">Python</span>
                 <span class="tech-pill">TensorFlow</span>
               </div>
             </div>
@@ -211,29 +284,31 @@
       </div>
     </section>
 
+    <!-- Selected Projects -->
     <section id="projects" class="section projects-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">03 / Engineering</span>
+          <span class="section-tag">02 / Engineering Systems</span>
           <h2 class="section-title">Selected Projects</h2>
         </div>
 
         <div class="filter-bar" id="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="ai-robotics">AI &amp; Robotics</button>
-          <button class="filter-btn" data-filter="systems-cloud">Systems &amp; Cloud</button>
-          <button class="filter-btn" data-filter="apps">Applications</button>
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="systems-cloud">Distributed &amp; Cloud</button>
+          <button class="filter-btn" data-filter="ai-robotics">Autonomous &amp; Robotics</button>
+          <button class="filter-btn" data-filter="apps">Applied AI &amp; Full-Stack</button>
         </div>
 
         <div class="projects-grid" id="projects-grid">
+          <!-- 1. Self Driving Car Simulation -->
           <article class="project-card" data-category="ai-robotics">
             <div class="project-header">
-              <span class="project-num">01</span>
+              <span class="project-num">SYS-01</span>
               <span class="project-cat">Autonomous AI</span>
             </div>
             <h3 class="project-title">Self-Driving Car Simulation</h3>
             <p class="project-desc">
-              Full-stack self-driving vehicle simulation built in Unity with a Python backend. Features convolutional neural networks for road sign and vehicle detection paired with A* path planning for collision-free trajectory navigation.
+              High-fidelity vehicle simulation built in Unity with a Python backend. Features convolutional neural networks for road sign and vehicle detection paired with A* path planning for collision-free trajectory navigation.
             </p>
             <div class="project-tech">
               <span>Unity</span>
@@ -247,9 +322,32 @@
             </div>
           </article>
 
+          <!-- 2. Real-Time Fraud Detection System -->
+          <article class="project-card" data-category="systems-cloud">
+            <div class="project-header">
+              <span class="project-num">SYS-02</span>
+              <span class="project-cat">Distributed Systems</span>
+            </div>
+            <h3 class="project-title">Real-Time Fraud Detection System</h3>
+            <p class="project-desc">
+              High-throughput machine learning pipeline capable of analyzing 20 million daily financial transactions with 99% accuracy. Deployed on AWS microservices with real-time alerting to Slack and security teams.
+            </p>
+            <div class="project-tech">
+              <span>TensorFlow</span>
+              <span>PySpark</span>
+              <span>AWS Microservices</span>
+              <span>Kafka</span>
+              <span>Python</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-metric">Processes 20M+ Transactions Daily</span>
+            </div>
+          </article>
+
+          <!-- 3. Autonomous Delivery Drone System -->
           <article class="project-card" data-category="ai-robotics">
             <div class="project-header">
-              <span class="project-num">02</span>
+              <span class="project-num">SYS-03</span>
               <span class="project-cat">Robotics</span>
             </div>
             <h3 class="project-title">Autonomous Delivery Drone System</h3>
@@ -260,39 +358,41 @@
               <span>ROS</span>
               <span>Python</span>
               <span>LiDAR</span>
-              <span>Computer Vision</span>
-              <span>Sensors</span>
+              <span>Point Cloud</span>
+              <span>Sensor Fusion</span>
             </div>
             <div class="project-footer">
               <span class="project-metric">Recipient of Best Innovation Award</span>
             </div>
           </article>
 
+          <!-- 4. Blockchain Voting Platform -->
           <article class="project-card" data-category="systems-cloud">
             <div class="project-header">
-              <span class="project-num">03</span>
-              <span class="project-cat">Distributed Systems</span>
+              <span class="project-num">SYS-04</span>
+              <span class="project-cat">Decentralized Systems</span>
             </div>
-            <h3 class="project-title">Real-Time Fraud Detection System</h3>
+            <h3 class="project-title">Blockchain-Based Voting System</h3>
             <p class="project-desc">
-              Distributed fraud detection pipeline capable of analyzing 20 million daily financial transactions with 99% accuracy. Deployed on AWS microservices with real-time alerting to Slack and security teams.
+              Tamper-proof electronic voting platform engineered using Solidity smart contracts on the Ethereum blockchain. Guarantees verifiable auditability and transparent cryptographic vote records.
             </p>
             <div class="project-tech">
-              <span>TensorFlow</span>
-              <span>PySpark</span>
-              <span>AWS Microservices</span>
-              <span>Kafka</span>
-              <span>Python</span>
+              <span>Solidity</span>
+              <span>Ethereum</span>
+              <span>Smart Contracts</span>
+              <span>Web3.js</span>
+              <span>Cryptography</span>
             </div>
             <div class="project-footer">
-              <span class="project-metric">20M+ Transactions Processed Daily</span>
+              <span class="project-metric">Cryptographic Public Auditability</span>
             </div>
           </article>
 
+          <!-- 5. AI Personal Assistant -->
           <article class="project-card" data-category="apps">
             <div class="project-header">
-              <span class="project-num">04</span>
-              <span class="project-cat">NLP &amp; Conversational AI</span>
+              <span class="project-num">SYS-05</span>
+              <span class="project-cat">Conversational AI</span>
             </div>
             <h3 class="project-title">AI Personal Assistant</h3>
             <p class="project-desc">
@@ -310,30 +410,10 @@
             </div>
           </article>
 
-          <article class="project-card" data-category="systems-cloud">
-            <div class="project-header">
-              <span class="project-num">05</span>
-              <span class="project-cat">Decentralized Systems</span>
-            </div>
-            <h3 class="project-title">Blockchain Voting System</h3>
-            <p class="project-desc">
-              Tamper-proof electronic voting platform engineered using Solidity smart contracts on the Ethereum blockchain. Guarantees verifiable auditability and transparent cryptographic vote records.
-            </p>
-            <div class="project-tech">
-              <span>Solidity</span>
-              <span>Ethereum</span>
-              <span>Smart Contracts</span>
-              <span>Web3.js</span>
-              <span>Cryptography</span>
-            </div>
-            <div class="project-footer">
-              <span class="project-metric">Tamper-Proof On-Chain Auditability</span>
-            </div>
-          </article>
-
+          <!-- 6. AI Resume Reviewer -->
           <article class="project-card" data-category="apps">
             <div class="project-header">
-              <span class="project-num">06</span>
+              <span class="project-num">SYS-06</span>
               <span class="project-cat">Applied AI</span>
             </div>
             <h3 class="project-title">AI-Driven Resume Reviewer</h3>
@@ -355,10 +435,11 @@
       </div>
     </section>
 
+    <!-- Technical Expertise -->
     <section id="skills" class="section skills-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">04 / Capabilities</span>
+          <span class="section-tag">03 / Competency Matrix</span>
           <h2 class="section-title">Technical Expertise</h2>
         </div>
         <div class="skills-matrix">
@@ -377,14 +458,14 @@
           </div>
 
           <div class="skill-category">
-            <h3 class="skill-group-title">Cloud, Systems &amp; DevOps</h3>
+            <h3 class="skill-group-title">Cloud, Distributed Systems &amp; DevOps</h3>
             <div class="skill-items">
               <span class="skill-chip">Kubernetes</span>
               <span class="skill-chip">Docker</span>
               <span class="skill-chip">AWS (SageMaker, Glue, Redshift, CloudWatch)</span>
               <span class="skill-chip">Azure</span>
               <span class="skill-chip">Jenkins</span>
-              <span class="skill-chip">CI/CD Pipelines</span>
+              <span class="skill-chip">CI/CD Automation</span>
               <span class="skill-chip">Git / GitHub</span>
             </div>
           </div>
@@ -403,7 +484,7 @@
           </div>
 
           <div class="skill-category">
-            <h3 class="skill-group-title">Data &amp; Frameworks</h3>
+            <h3 class="skill-group-title">Data Engineering &amp; Frameworks</h3>
             <div class="skill-items">
               <span class="skill-chip">Apache Spark</span>
               <span class="skill-chip">PostgreSQL</span>
@@ -419,12 +500,70 @@
       </div>
     </section>
 
+    <!-- Academic Foundation & About -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 / Academic Foundation</span>
+          <h2 class="section-title">Education and Leadership</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <p>
+              I build software where low-latency performance, algorithmic precision, and distributed stability intersect. My engineering experience ranges from container orchestration algorithms at the Linux Foundation CNCF to deep reinforcement learning simulation engines for autonomous vehicles.
+            </p>
+            <div class="education-card">
+              <div class="edu-header">
+                <h3>National Institute of Engineering, Mysore</h3>
+                <span class="edu-period">2024 - 2028</span>
+              </div>
+              <p class="edu-degree">Bachelor of Engineering: Computer Science and Engineering</p>
+              <p class="edu-metric">Academic Standing: 9.7 CGPA</p>
+              <div class="coursework-tags">
+                <span class="tag">Advanced Algorithms</span>
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Distributed Systems</span>
+                <span class="tag">Operating Systems</span>
+                <span class="tag">Cloud Computing</span>
+                <span class="tag">Cybersecurity</span>
+                <span class="tag">Software Design Patterns</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">01</div>
+              <div>
+                <h4>Club President &amp; Speaker</h4>
+                <p>President of Computer Science Club, organizing weekly workshops and mentoring over 100 student engineers.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">02</div>
+              <div>
+                <h4>Technical Writing</h4>
+                <p>Authored 30+ comprehensive engineering deep-dives covering systems and algorithms, generating over 100k views.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">03</div>
+              <div>
+                <h4>STEM Community Outreach</h4>
+                <p>Volunteering to teach fundamental programming and algorithmic logic to high school students.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section contact-section">
       <div class="container contact-container">
         <div class="section-header text-center">
-          <span class="section-tag">05 / Initiate Contact</span>
+          <span class="section-tag">05 / Initiate Communication</span>
           <h2 class="section-title">Let Us Build Something Significant</h2>
-          <p class="section-subtext">Open to distributed systems engineering, AI research, and high-impact software challenges.</p>
+          <p class="section-subtext">Open to distributed systems engineering, AI research, and high-impact infrastructure challenges.</p>
         </div>
         <div class="contact-card">
           <div class="contact-methods">
@@ -459,16 +598,76 @@
     </section>
   </main>
 
+  <!-- Interactive Terminal Modal -->
+  <div class="terminal-modal" id="terminal-modal" role="dialog" aria-modal="true" aria-label="Interactive Command Terminal">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">laraib@cluster-control:~ (vanilla js terminal)</span>
+        <button class="terminal-close-btn" id="terminal-close-btn" aria-label="Close Terminal">&times;</button>
+      </div>
+      <div class="terminal-quick-chips">
+        <button class="term-quick-chip" data-cmd="help">help</button>
+        <button class="term-quick-chip" data-cmd="cat resume">cat resume</button>
+        <button class="term-quick-chip" data-cmd="experience">experience</button>
+        <button class="term-quick-chip" data-cmd="projects">projects</button>
+        <button class="term-quick-chip" data-cmd="skills">skills</button>
+        <button class="term-quick-chip" data-cmd="benchmark">benchmark</button>
+        <button class="term-quick-chip" data-cmd="clear">clear</button>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <div class="term-line term-line-info">Welcome to Muhammad Laraib Jamal's Interactive Console.</div>
+        <div class="term-line term-line-dim">Type 'help' to inspect commands, or 'cat resume' for full credentials. Press [Esc] to exit.</div>
+      </div>
+      <div class="terminal-footer">
+        <span class="term-prompt">&gt;</span>
+        <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (try 'help' or 'cat resume')..." autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture Blueprint Modal -->
+  <div class="blueprint-modal" id="blueprint-modal" role="dialog" aria-modal="true" aria-label="System Architecture Blueprint">
+    <div class="blueprint-window">
+      <div class="blueprint-header">
+        <div>
+          <span class="bp-modal-badge" id="bp-modal-company">System Architecture</span>
+          <h3 class="bp-modal-title" id="bp-modal-title">Architecture Blueprint</h3>
+        </div>
+        <button class="bp-close-btn" id="bp-close-btn" aria-label="Close Blueprint">&times;</button>
+      </div>
+      <div class="blueprint-meta-bar">
+        <div class="bp-metric-badge">
+          <span class="bp-metric-label">Key Metric:</span>
+          <span class="bp-metric-val" id="bp-modal-metric">--</span>
+        </div>
+        <p class="bp-modal-summary" id="bp-modal-summary">System overview description.</p>
+      </div>
+      <div class="blueprint-svg-container" id="bp-modal-svg"></div>
+      <div class="blueprint-nodes-grid" id="bp-modal-nodes"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <p class="footer-copy">&copy; 2026 Muhammad Laraib Jamal. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Muhammad Laraib Jamal. Distributed Systems &amp; Autonomous AI.</p>
       <div class="footer-links">
         <a href="#hero">Back to Top</a>
         <a href="laraib cv.pdf" target="_blank">Resume PDF</a>
+        <a href="https://github.com/vansh917917/portfolio-laraib" target="_blank" rel="noopener noreferrer">Source Repository</a>
       </div>
     </div>
   </footer>
 
+  <!-- Vanilla Scripts -->
+  <script src="js/simulation.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/blueprints.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
